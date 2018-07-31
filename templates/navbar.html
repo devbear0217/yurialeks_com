@@ -1,0 +1,43 @@
+{% load static %}
+<div class="topbar-mobile">
+    <div class="logo">
+        <a href="#"><img src="{% static 'img/logo.png' %}" style="height: 44px;"></a>
+        <button class="button-menu-mobile">
+            <i class="mdi mdi-menu"></i>
+        </button>
+    </div>
+</div>
+    <div class="navbar">
+        <div class="slimscroll-menu" id="remove-scroll">
+            <div class="logo">
+    {#            <a href="#"><img src="{% static 'img/logo.png' %}" style="height: 44px;"></a>#}
+                <p class="text-muted">Сайт Алексеева Юрия</p>
+            </div>
+            <div id="nav-menu">
+                <ul class="metismenu" id="side-menu">
+                    <li>
+                        <a href="{% url 'articles_list' %}"><span>На главную</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span>Категории</span></a>
+                            <ul class="nav-menu-second-level" aria-expanded="false">
+                                {% block nav %}
+                                    {% for cat in categories %}
+                                        <li><a href="#"> {{ cat.name }}</a></li>
+                                    {% endfor %}
+                                {% endblock %}
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="{% url 'about_me' %}"><span>Обо мне</span></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact' %}"><span>Контакты</span></a>
+                    </li>
+                </ul>
+                <div class="copyright-box">
+                    <p>2018 © Алексеев Юрий. </p>
+                </div>
+            </div>
+        </div>
+    </div>

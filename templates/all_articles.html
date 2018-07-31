@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+        {% for article in articles %}
+            <article class="post">
+                <div class="post-header">
+                    <h2 class="post-title"><a href="{% url 'article_by_slug' slug=article.get_absolute_url %}">{{ article.titleru }}</a></h2>
+                    <ul class="post-meta">
+                        <li><i class="mdi mdi-calendar"> {{ article.published_date }}</i></li>
+                        {% for tag in article.tags.all %}
+                            <li><i class="mdi mdi-tag-text-outline"> <a href="{% url 'articles_by_tag' slug=tag.slug_tag  %}">{{ tag }}</a></i></li>
+                        {% endfor %}
+{#                        <li><i class="mdi mdi-comment-multiple-outline"><a href="#"> 3 Comments</a></i></li>#}
+                    </ul>
+                </div>
+                <div class="post-preview">
+                    <a href="{% url 'article_by_slug' slug=article.get_absolute_url %}"><img src="{{ article.preview_image.url }}" class="img-fluid rounded"></a>
+                </div>
+                <div class="post-content">
+                    <p>{{ article.short_text|safe }}</p>
+                </div>
+                <div><a href="{% url 'article_by_slug' slug=article.get_absolute_url %}" class="button outline-button">Подробнее</a></div>
+            </article>
+        {% endfor %}
+    </main>
+    <aside>
+        {% include 'right_bar.html' %}
+    </aside>
+{% endblock %}

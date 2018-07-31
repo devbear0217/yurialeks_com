@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+        <article class="post">
+            <h5 class="title text-center text-uppercase "><b>Обо мне</b></h5>
+            <div class="post-preview text-center">
+                <img src="{{ information.my_photo.url }}" alt="Моя фотография" class="img-fluid rounded">
+            </div>
+            <div class="blog-detail-description">
+                {{ information.my_description | safe }}
+                <ul class="socials socials-about text-center unstyled">
+                    <li><a href="https://vk.com/yurialeks"><i class="mdi mdi-vk-circle"></i></a></li>
+                    <li><a href="https://www.instagram.com/yuri_aleks/"><i class="mdi mdi-instagram"></i></a></li>
+                    <li><a href="https://t.me/itbear"><i class="mdi mdi-telegram"></i></a></li>
+                    <li><a href="https://www.facebook.com/yuri.alekseev.7"><i class="mdi mdi-facebook"></i></a></li>
+                    <li><a href="https://github.com/Kuma-San0217"><i class="mdi mdi-github-circle"></i></a></li>
+                    <li><a href="https://vk.com/yurialeks"><i class="mdi mdi-steam"></i></a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+{% endblock %}

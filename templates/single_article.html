@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <main>
+        <article>
+            <div class="post-header">
+                <h2 class="post-title"><a href="#">{{ article.titleru }}</a></h2>
+                <ul class="post-meta">
+                    <li><i class="mdi mdi-calendar"> {{ article.published_date }}</i></li>
+{#                    <li><i class="mdi mdi-tag-text-outline"> <a href="#">{{ article.tags }}</a></i></li>#}
+{#                  <li><i class="mdi mdi-comment-multiple-outline"><a href="#"> 3 Comments</a></i></li>#}
+                </ul>
+            </div>
+            <div class="post-preview">
+                <a href="#"><img src="{{ article.preview_image.url }}" class="img-fluid rounded"></a>
+            </div>
+            <div class="post-content">
+                <p>{{ article.text|safe }}</p>
+            </div>
+        </article>
+    </main>
+    <aside>
+        {% include 'right_bar.html' %}
+    </aside>
+{% endblock content %}

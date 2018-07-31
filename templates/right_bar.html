@@ -1,0 +1,31 @@
+{% load static %}
+<div class="sidebar">
+    <div class="widget widget_search">
+        <form>
+            <input class="form-control pr-5" type="search">
+            <button class="search-button" type="submit">
+                <span class="mdi mdi-magnify"></span>
+            </button>
+        </form>
+    </div>
+    <div class="widget about-widget">
+        <div class="widget-title">Немного обо мне</div>
+        <div class="text-center">
+            <img src="{% static 'img/about.jpg'%}" alt="Фото владельца" class="rounded-circle">
+            <p>Меня зовут Алексеев Юрий. Я программист. Студент-оптотехник. Гик и спортсмен-любитель.</p>
+            <br>
+            <p>Я заинтересован в различных областях IT-индустрии. В данный момент сосредоточен на разработке Web-приложений на Python. Также интересуюсь другими областями применения языка Python</p>
+        </div>
+    </div>
+    <div class="widget about-widget">
+        <div class="widget-title">Я в социальных сетях</div>
+        <ul class="socials">
+            <li><a href="https://vk.com/yurialeks"><i class="mdi mdi-vk-circle"></i></a></li>
+            <li><a href="https://www.instagram.com/yuri_aleks/"><i class="mdi mdi-instagram"></i></a></li>
+            <li><a href="https://t.me/itbear"><i class="mdi mdi-telegram"></i></a></li>
+            <li><a href="https://www.facebook.com/yuri.alekseev.7"><i class="mdi mdi-facebook"></i></a></li>
+            <li><a href="https://github.com/Kuma-San0217"><i class="mdi mdi-github-circle"></i></a></li>
+            <li><a href="https://vk.com/yurialeks"><i class="mdi mdi-steam"></i></a></li>
+        </ul>
+    </div>
+</div>

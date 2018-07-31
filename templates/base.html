@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,600,700" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'css/metisMenu.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/materialdesignicons.min.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                {% include 'navbar.html' %}
+            </nav>
+            {% block content %}
+            {% endblock %}
+
+        </div>
+        <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script src="{% static 'js/metisMenu.min.js' %}"></script>
+        {% block javascript %}
+        <script src="{% static 'js/script.js' %}"></script>
+        {% endblock %}
+    </body>
+</html>
