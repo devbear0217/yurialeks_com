@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'tmna*ta!$q+mo$3odvu#(*=x+w97(q^mi0fmftdmj^nt4&wyd)'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -134,12 +134,4 @@ CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 # Settings for Sendgrid
 
-SEND_GRID_API_KEY = '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'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'Yuri0217'
-EMAIL_HOST_PASSWORD = 'Gremlin0217'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'Yuri0217@yandex.ru'
-ACCOUNT_EMAIL_SUBJECT_PREFIX = 'Yuri0217@yandex.ru'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
